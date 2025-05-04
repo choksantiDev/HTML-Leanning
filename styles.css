@@ -1,12 +1,21 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #333;
-    margin: 0;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 100vh;
+    width: 100vw;
+}
+nav {
+    background-color: #ffffff;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    height: 10%;
 }
 h1 {
-    color: #4CAF50;
+    color: #00c2db;
 }
 p {
     font-size: 16px;
@@ -14,22 +23,68 @@ p {
 ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: end;
 }
-
-input[type="text"] {
-    width: 100%;
+li {
+    margin: 0 10px;
+}
+a {
+    text-decoration: none;
+    color: #acacac;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+    color: #00c2db;
+}
+div {
+    padding: 20px;
+}
+footer {
+    background-color: #ffffff;
+    color: #acacac;
     padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
-input[type="text"]:focus {
-    border-color: #4CAF50;
-    outline: none;
+.padding-x {
+    padding: 0 10px;
 }
-input[type="text"]::placeholder {
-    color: #aaa;
+.left {
+    float: left;
+    width: 50%;
 }
-input[type="text"]:hover {
-    border-color: #4CAF50;
+.main {
+    float: right;
+    width: 40%;
+}
+.text-very-large {
+    font-size: 70px;
+}
+.icon-size {
+    width: 48px;
+    height: 48px;
+}
+.bordered {
+    border: 1px solid #00c2db;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 768px) {
+    .left, .main {
+        width: 100%;
+        float: none;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
